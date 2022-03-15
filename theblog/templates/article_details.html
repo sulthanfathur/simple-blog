@@ -36,7 +36,7 @@
     {% else %}
         <a href="{% url 'login' %}">Log in to add a comment.</a>
     {% endif %}
-    
+    <br/><br/><br/><br/>
 {% else %}
 
     {% if user.is_authenticated %}
@@ -52,7 +52,6 @@
             {{ comment.body }}
             <br/><br/>
         {% endfor %}
-
 {% endif %}
 
 {% endblock %}
