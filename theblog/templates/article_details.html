@@ -12,7 +12,7 @@
     {{ post.author.last_name }} 
 
     {% if user.is_authenticated %}
-        {% if user.id == 1 %}
+        {% if user.is_superuser %}
             - (<a href="{% url 'edit_post' post.pk%}">Edit</a>)
             (<a href="{% url 'delete_post' post.pk%}">Delete</a>)
 
