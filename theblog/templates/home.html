@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Welcome!</h1>
+<p>My name is Sulthan Fathurrahman Tsany. I am a first-year undergraduate computer science student in Universitas Indonesia who is currently living in Jakarta. As to why I choose computer science, I guess I’ve always been a geek about computers. My father brought home a PC from his office back when I was eight. Since then, I’ve enjoyed doing many things with it.
+    I've surfed the web to fulfill my curiosities, played hundreds of games, and learned photo/video editing for fun. When the hardware got outdated, I started saving money for better parts. Eventually, I grew a desire to become a software developer.
+    <br/>This is the blog where I post updates around my personal life or just simply sharing what is on my mind. Enjoy your stay!
+    </p>
+<br/>
+
+<h1>Posts</h1>
+
+<ul>
+{% for post in object_list %}
+    <li>
+        <a href="{% url 'article-detail' post.pk%}">{{ post.title }}</a> 
+        - {{ post.author.first_name }} 
+        {{ post.author.last_name }} 
+        <small>
+            {% if user.is_authenticated %}
+                {% if user.id == 1 %}
+                - (<a href="{% url 'edit_post' post.pk%}">Edit</a>)
+                (<a href="{% url 'delete_post' post.pk%}">Delete</a>)
+                {% endif %}
+            {% endif %}
+        </small>
+        <br/>
+        {{ post.post_snippet }}
+    </li>
+{% endfor %}
+</ul>
+
+
+{% endblock %}
