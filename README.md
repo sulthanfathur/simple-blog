@@ -7,7 +7,7 @@ A simple django blog featuring comments and user authentication.
 - Posts: Superusers can create, edit, comment, and delete posts.
 - Comments: Any users can add comments within a post.
 
-## Local Installation
+## How to Run it Locally
 1. Install virtualenv:
 
     ```bash
