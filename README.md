@@ -1,6 +1,6 @@
 # simple-blog
 
-A simple django blog featuring comments and user authentication.
+A simple bootstrapified django blog featuring comments and user authentication.
 
 ## Features
 - User Authentication: Users can register and login to the site. They can view and add comments to posts (which can only be made by superusers.)
