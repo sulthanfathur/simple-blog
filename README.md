@@ -2,6 +2,11 @@
 
 A simple django blog featuring comments and user authentication.
 
+## Features
+-User Authentication: Users can register and login to the site. They can add comments to posts (which can only be made by superusers.)
+-Posts: Superusers can create, edit, comment, and delete posts.
+-Comments: Any users can add comments within a post.
+
 ## Installation
 1. Install virtualenv:
 
